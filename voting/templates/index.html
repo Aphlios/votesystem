@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container centered">
+        <div class="text-center">
+            <h1 class="mb-5">Vote for your favorite pet</h1>
+            <form action="/vote" method="post">
+                <div class="form-group">
+                    <button type="submit" name="option" value="Cats" class="btn btn-primary btn-lg btn-block mb-3">Vote for Cats</button>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="option" value="Dogs" class="btn btn-secondary btn-lg btn-block">Vote for Dogs</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

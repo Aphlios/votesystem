@@ -1,0 +1,26 @@
+version: '3'
+services:
+  voting:
+    build: ./voting
+    ports:
+      - "6110:5000"
+    depends_on:
+      - database
+
+  result:
+    build: ./result
+    ports:
+      - "6111:5000"
+    depends_on:
+      - database
+
+  database:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: votingdb
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
