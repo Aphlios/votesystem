@@ -1,6 +1,6 @@
 # Voting System 
 
-**This is a repo of CISC7403 Project**
+**This is a repo of CISC7403 Project For group B7**
 
 ## Document structure: 	
 
